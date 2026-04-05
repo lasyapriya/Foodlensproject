@@ -1,0 +1,5 @@
+{
+  "name": "Food Lens",
+  "description": "Scan food ingredient labels to check for allergens and health-related ingredients based on your personal profile.",
+  "requestFramePermissions": ["camera"]
+}
