@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { UserProfile, AnalysisResult } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 export async function analyzeIngredients(
   imageBase64: string,
@@ -25,7 +25,7 @@ export async function analyzeIngredients(
   `;
 
   const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
+    model: "gemini-2.0-flash",
     contents: [
       {
         parts: [
